@@ -28,6 +28,21 @@ constructor(private api:ApiService){}
       (response:any)=>{
 
         console.log(response)
+
+        if(response.status == "success"){
+          alert("Product added successfully")
+          this.prd_code = ""
+          this.prd_name = ""
+          this.mnf_date = ""
+          this.exp_date = ""
+          this.brand = ""
+          this.price = ""
+          this.seller_name = ""
+          this.distr_name = ""
+        }
+        else{
+          alert("Something went wrong")
+        }
       }
     )
   }
