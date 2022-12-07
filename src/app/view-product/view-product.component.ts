@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-view-product',
@@ -7,6 +8,16 @@ import { Component } from '@angular/core';
 })
 export class ViewProductComponent {
 
-  data:any = [{"prd_code":"101","prd_name":"tv","mnf_date":"2022-12-09","exp_date":"2039-12-08","brand":"Samsung","price":35000,"seller_name":"abcd","distr_name":"abcd"}]
+  constructor(private api:ApiService){
+
+    api.fetchProduct().subscribe(
+      (response)=>{
+
+        this.data = response
+      }
+    )
+  }
+
+  data:any = []
 
 }
