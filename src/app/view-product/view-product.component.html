@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor = "let i of data">
+                    <div class="card" style="height: 40rem;">
+                        <img src="https://www.nabenet.org/global_graphics/default-store-350x350.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{i.prd_name}} </h5>
+                          <p class="card-text">Product code : {{i.prd_code}} </p>
+                          <p class="card-text">Manufacturing Date : {{i.mnf_date}} </p>
+                          <p class="card-text">Expiring Date : {{i.exp_date}} </p>
+                          <a href="#" class="btn btn-primary">View</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
